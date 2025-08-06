@@ -20,18 +20,45 @@
             border: 2px solid #fff;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             transition: transform 0.3s;
+            cursor: pointer;
         }
 
         .foto:hover {
             transform: scale(1.2) rotate(2deg);
             z-index: 10;
         }
+
+        /* Fondo oscuro para el zoom */
+        .zoom-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .zoom-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            box-shadow: 0 0 20px #000;
+            border: 5px solid #fff;
+        }
     </style>
 </head>
 <body>
 
+<!-- Contenedor para mostrar la imagen ampliada -->
+<div class="zoom-overlay" id="zoomOverlay">
+    <img src="" id="zoomImage" alt="Zoom">
+</div>
+
 <script>
-    const usadas = []; // Para guardar coordenadas usadas y evitar que se empalmen
+    const usadas = [];
+    const overlay = document.getElementById("zoomOverlay");
+    const zoomImage = document.getElementById("zoomImage");
 
     for (let i = 1; i <= 14; i++) {
         const img = document.createElement("img");
@@ -39,13 +66,11 @@
         img.className = "foto";
 
         let top, left;
-        let separacionMin = 100; // Separación mínima entre imágenes
-
-        // Asegura que no se empalmen tanto
+        let muyCerca;
         do {
-            top = Math.floor(Math.random() * 75) + 5;   // vh
-            left = Math.floor(Math.random() * 85) + 5;  // vw
-            var muyCerca = usadas.some(p => Math.abs(p.top - top) < 10 && Math.abs(p.left - left) < 10);
+            top = Math.floor(Math.random() * 75) + 5;
+            left = Math.floor(Math.random() * 85) + 5;
+            muyCerca = usadas.some(p => Math.abs(p.top - top) < 10 && Math.abs(p.left - left) < 10);
         } while (muyCerca);
 
         usadas.push({ top, left });
@@ -54,8 +79,22 @@
         img.style.left = left + "vw";
         img.style.transform = `rotate(${Math.random() * 20 - 10}deg)`;
 
+        // Al hacer clic en la imagen, mostrar en grande
+        img.addEventListener("click", function() {
+            zoomImage.src = this.src;
+            overlay.style.display = "flex";
+        });
+
         document.body.appendChild(img);
     }
+
+    // Cerrar zoom al dar clic fuera de la imagen
+    overlay.addEventListener("click", function(e) {
+        if (e.target !== zoomImage) {
+            overlay.style.display = "none";
+            zoomImage.src = "";
+        }
+    });
 </script>
 
 </body>
