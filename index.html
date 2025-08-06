@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Fotos dispersas</title>
+    <title>Ma vie</title>
     <style>
         body {
             margin: 0;
@@ -39,14 +39,14 @@
             z-index: 1000;
         }
 
-        .zoom-overlay img {
+        .zoom-overlay img,
+        .zoom-overlay video {
             max-width: 90vw;
             max-height: 90vh;
             box-shadow: 0 0 20px #000;
             border: 5px solid #fff;
         }
 
-        /* Video fijo */
         .video-fijo {
             position: fixed;
             top: 10px;
@@ -57,23 +57,21 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.4);
             border: 2px solid #fff;
             background-color: #000;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
 <!-- Video fijo -->
-<video class="video-fijo" src="15.mp4" autoplay muted loop></video>
+<video class="video-fijo" src="15.mp4" autoplay muted loop id="videoFijo"></video>
 
-<!-- Contenedor para mostrar la imagen ampliada -->
-<div class="zoom-overlay" id="zoomOverlay">
-    <img src="" id="zoomImage" alt="Zoom">
-</div>
+<!-- Contenedor para mostrar la imagen o video ampliado -->
+<div class="zoom-overlay" id="zoomOverlay"></div>
 
 <script>
     const usadas = [];
     const overlay = document.getElementById("zoomOverlay");
-    const zoomImage = document.getElementById("zoomImage");
 
     for (let i = 1; i <= 14; i++) {
         const img = document.createElement("img");
@@ -94,22 +92,37 @@
         img.style.left = left + "vw";
         img.style.transform = `rotate(${Math.random() * 20 - 10}deg)`;
 
-        img.addEventListener("click", function() {
-            zoomImage.src = this.src;
-            overlay.style.display = "flex";
+        img.addEventListener("click", function () {
+            mostrarZoomImagen(this.src);
         });
 
         document.body.appendChild(img);
     }
 
-    overlay.addEventListener("click", function(e) {
-        if (e.target !== zoomImage) {
+    function mostrarZoomImagen(src) {
+        overlay.innerHTML = `<img src="${src}">`;
+        overlay.style.display = "flex";
+    }
+
+    function mostrarZoomVideo(src) {
+        overlay.innerHTML = `<video src="${src}" controls autoplay></video>`;
+        overlay.style.display = "flex";
+    }
+
+    // Zoom para el video fijo
+    const videoFijo = document.getElementById("videoFijo");
+    videoFijo.addEventListener("click", function () {
+        mostrarZoomVideo(this.src);
+    });
+
+    // Cerrar zoom al dar clic fuera del contenido
+    overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
             overlay.style.display = "none";
-            zoomImage.src = "";
+            overlay.innerHTML = "";
         }
     });
 </script>
 
 </body>
 </html>
-
