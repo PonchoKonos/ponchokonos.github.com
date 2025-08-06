@@ -1,188 +1,50 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title> Feliz cumpleaños borrador </title>
+    <meta charset="UTF-8">
+    <title>Fotos dispersas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+            position: relative;
+        }
 
-<style>
-</style>
-<link rel="stylesheet" src="/style.css">
+        .foto {
+            position: absolute;
+            width: 120px;
+            height: auto;
+            border: 2px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .foto:hover {
+            transform: scale(1.1) rotate(3deg);
+            z-index: 100;
+        }
+    </style>
 </head>
-
 <body>
 
-<h1 id="0"> <strong> <em> Feliz cumpleañoooossss🖤🖤🖤 </em> </strong> </h1>
+<script>
+    // Genera imágenes del 1.jpg al 14.jpg
+    for (let i = 1; i <= 14; i++) {
+        const img = document.createElement("img");
+        img.src = i + ".jpg";
+        img.className = "foto";
 
-<p> Hola mi hermosa solo quería desearte un muy feliz cumpleaños y espero te la pases muy bien en tu día, ya 17 añotes🎊🎈🎂 <br>
-Sólo quiero que sepas que me haces una persona muy feliz y que tú sabes que te amo mucho🖤 <br>
-Este ya casi año de conocernos a sido muy feliz para mí y quién diría que de pasar de hablar con una persona que ni conocía a ser la persona que más quiero. <br>
-No pues nada guapa solo quería desearte un feliz cumpleaños pero de una manera un poco distinta Jaja <br>
-Al rato nos vemos te mando un beso mi guapa </p>
+        // Posiciones aleatorias dentro del body
+        img.style.top = Math.random() * 80 + "vh";
+        img.style.left = Math.random() * 90 + "vw";
+        img.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
 
-<p id="Lista"> Aquí te dejo una lista de algunas de nuestras fotos amor 
-<ul> 
-<a href="#B"> <li>14/02/2021</li> </a>
-<a href="#C"> <li>21/02/2021</li> </a>
-<a href="#D"> <li>24/03/2021</li> </a>
-<a href="#E"> <li>18/04/2021</li> </a>
-<a href="#F"> <li>22/05/2021</li> </a>
-<a href="#H"> <li>30/05/2021</li> </a>
-<a href="#G"> <li>05/06/2021</li> </a>
-<a href="#I"> <li>12/06/2021</li> </a>
-<a href="#J"> <li>04/08/2021</li> </a>
-<a href="#K"> <li>15/08/2021</li> </a>
-<a href="#L"> <li>21/08/2021</li> </a>
-<a href="#M"> <li>05/09/2021</li> </a>
-<a href="#N"> <li>10/10/2021</li> </a>
-</ul>
-</p>
+        document.body.appendChild(img);
+    }
+</script>
 
-<img id="B" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/254351908_227269702772219_3150400995250569678_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHYECym4zWmtPuy6LB5XTEBgOJNHK3vwzGA4k0cre_DMfQvPgzP8X8cJSV2GPoepAczEWLRzVLjs4qHmcoXTW2D&_nc_ohc=o4NR_N3tFvUAX9U-mrE&_nc_ht=scontent.ftij1-1.fna&oh=9546ce80dffb1f17ddfed43b4a2ba493&oe=61B6A4E1" alt="14/02/2021"> 
-<p id="Catorce"> Nuestro primer <span> 14 de febrero<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="C" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/253783120_864600584253090_5027007981891587239_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHibIIwmeNJHOhrpBz2rioSPPKrhXtTNK888quFe1M0r3dnq4Q_BLO58U1ENqnt_p00JpW6acb4cgRcdowqOWp0&_nc_ohc=3__QbmdIcOsAX_aCl7P&_nc_ht=scontent.ftij1-1.fna&oh=243fb0c604234f6b8bbfcc1890912038&oe=61B77D6E" alt="Felizmente casado"> 
-<p id="Casados"> El día en el que nos casamos amor<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="D" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/255887239_194583202857716_2691211403045913552_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFdzxhQG22-ikNCz5tfVb4-oRCFFVQJShShEIUVVAlKFNVV8deGPtTSh3G5je6dsMYsv2wbz2q-C8UuBkQnF1b9&_nc_ohc=qvGEHPHBoUEAX9yPnY9&_nc_ht=scontent.ftij1-1.fna&oh=2bf39ebb3e4e83d5306593ffd16ec351&oe=61B6FF87" alt="Que bonito dibujo amor"> 
-<p id="Dibujo"> El primer  <span>dibujo</span> online que me hiciste hermosa<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="E" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/248039581_404707097975580_1172459872138928518_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeETO6IHKLtiOL7LPJP_1AEz_eOGCmM95cD944YKYz3lwK8-ca8-d5XzThvezBywy12-aXeW4p2q_KidTFmK3M59&_nc_ohc=SxQ_Aiwf_nQAX9chqif&tn=fchW8p8Z_tH48YCa&_nc_ht=scontent.ftij1-2.fna&oh=c12ddb0921cbb26c0185000226d84b11&oe=61B7D5B5" alt="18/04/2021">
-<p id="Abril"> Este fue un 18 de Abril muy bonito a tu lado<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="F" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/248239739_596167851587540_567391667426913969_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEeMlXeX61FnIBcsi-ndtyZckBB3wr4heZyQEHfCviF5iw9_JXEoCdDwzuZ6KLpDk5SHOJSON3BB6way41oQwym&_nc_ohc=_0atyQx4qf8AX-HGaiY&tn=fchW8p8Z_tH48YCa&_nc_ht=scontent.ftij1-1.fna&oh=f1fc7227a50bc0275b51a1f827063237&oe=61B731FC" alt="22/05/2021"> 
-<p id="XV"> Los <span>XV</span> de mi prima y te mirabas muy preciosa<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="Ñ" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/254829790_627459772011916_6177720313479836061_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFjZKZz7vs0a0QsJzwint5AcuRbfDOBlq9y5Ft8M4GWr8TJh164vx522o_7Gi6JNGg_dgOw3KxS47slMhjjr9dg&_nc_ohc=5bVPHBR4KcgAX_hz-fk&tn=fchW8p8Z_tH48YCa&_nc_ht=scontent.ftij1-2.fna&oh=cdf1885831caf818839d632a1058994f&oe=61B72B75" alt="Los XV de mi Prima"> 
-<img id="G" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/252489390_4535091516526971_880099576915904721_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHr8jXja9Gnsi58TahGCEXi8QNo1z-PSZ7xA2jXP49JnmD0KNoY2mVq881KKHpNNB37oIX7BV-3gOmU8SjZcICw&_nc_ohc=buFumeqti2oAX_MlRRm&_nc_ht=scontent.ftij1-1.fna&oh=15975db2f7905de6bc61f749e21eeb2c&oe=61B964E8" alt="30/05/2021"> 
-<p id="Cine"> Nuestra primera vez en el cine<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="H" src="https://cdn.fbsbx.com/v/t59.2708-21/248025013_416398966744329_5463338858494451292_n.gif?_nc_cat=100&fallback=1&ccb=1-5&_nc_sid=041f46&_nc_ohc=7ZS53l-_L8UAX95oAUY&_nc_ht=cdn.fbsbx.com&oh=69d01b790707886b2439df51bd2715f4&oe=61975285" alt="Que hermosa te mirabas ese día">
-<img id="O" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/243542829_266737998752140_4376636976409428176_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGHNmdefjbWCDvzTms_vKqwZxQzfheYzT9nFDN-F5jNP6oPRQrU9AoGzPeVd4-bHxdIQc6U4KD_jfKgRnY3eNxO&_nc_ohc=Mk9RiPHbkpUAX-39eFk&_nc_ht=scontent.ftij1-1.fna&oh=a9c101fda9da09965ce773e5e750ae34&oe=61B97D71" alt="05/06/2021"> 
-<p id="Amarillo"> La fiesta de tus sobrinitos <br>
-Pd: Que hermosa te mirabas ese día de amarillo<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="I" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/255229580_865923817395841_5900932530319788333_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEEVfUnZSJ7IfdADMeI0uxPG8u27O1PjJcby7bs7U-Ml8UIRLVi7ipxI_9-eIZGCyXZIGo6k-AHTeV5csSuFZ-7&_nc_ohc=0XQPUySfZRQAX-mUDtw&_nc_ht=scontent.ftij1-1.fna&oh=13678e685affce264892f0fe006f7083&oe=61B8209C" alt="Cuando nos hicimos novios"> 
-<p id="Novios">El día en que nos hicimos <span>novios</span> guapa<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="P" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/254021829_592781648698842_5254786973363301949_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGk_Ag33-dbykF0irRBfBO4KdoYCGTuOFQp2hgIZO44VFd9vnU2K4qgU9-5jMW8a0p8-LzS6U51Mo1rsmm5QNZw&_nc_ohc=E9VfTAru0hQAX_6u4Ol&_nc_ht=scontent.ftij1-2.fna&oh=22dcfd66f8d0766dbf8c4cd5af3851b4&oe=61B6EC8A" alt="12/06/2021"> 
-<img id="J" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/252903583_1022378291666615_8545552227204880307_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGAy5Cf7szP_CBXbQepX_UxUuKRgfDarFtS4pGB8NqsW74xxT0vN_YvXNTTrJRdLdYNakASpjPLLkQVsDTk6kB9&_nc_ohc=mJ-JvQ79H8MAX8uTr7X&_nc_ht=scontent.ftij1-2.fna&oh=cdaef86495b52142d1a3e2e9377614f6&oe=61B5D1B3" alt="04/08/2021"> 
-<p id="Fiesta"> Una fiesta muy bonita<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="K" src="https://scontent.ftij1-1.fna.fbcdn.net/v/t1.15752-9/254156257_411893497105485_4321312485183206193_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEbMLKZKCqiN7rguLjKYbW6ewttJiEpNCl7C20mISk0KQLpmPRV6lcWRumS33JFTft9kq1kbQZ7Yr8vOE58Gz-7&_nc_ohc=2O_Ej64RON8AX-QpQpq&_nc_ht=scontent.ftij1-1.fna&oh=d96b654d46940821717663c143a90539&oe=61B7F99F" alt="15/08/2021"> 
-<p id="Tio"> Cuando conocí a ti tío de Estados Unidos y fuimos a la fiesta<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="L" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/256295851_845735596104285_2044409318018308011_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeG-RVp03Wl2oRTAMI0NckO6FT5rCzKwbkQVPmsLMrBuRFJxyfe7YBGf-iwDwIJndj0kFJX-wL9srKNCtajHOZME&_nc_ohc=lErMt4RDUZ4AX9udQgd&_nc_oc=AQlPbgEJg8ri2SjuWKbG62YV5NxxxoqQ28TJrmfntR6jxAZDBT8bfuwVzdAkFAo55ic&tn=fchW8p8Z_tH48YCa&_nc_ht=scontent.ftij1-2.fna&oh=9449d00e3acf366ab202f58445b57539&oe=61B73087" alt="21/08/2021"> 
-<p id="Balto"> Cuando conocí a nuestra bendición <span>Balto</span><span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="M" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/253810179_426797229115873_1311975196015457407_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEO038W-m4xLFak81cQZHnkyyHVV7RWQFbLIdVXtFZAVhxJFQEnQzwEpABU1WjWYx2XE_igW8zxznrBMeuLnvuy&_nc_ohc=BrLxGoRLuJAAX91MyNz&tn=fchW8p8Z_tH48YCa&_nc_ht=scontent.ftij1-2.fna&oh=7450fbdd61cd949b735809d5826e41a8&oe=61B9592D" alt="14/09/2021"> 
-<p id="Nicol"> En la fiesta de tu prima Nicol<span class="Punto"><a href="#Lista">.</a></span></p>
-<img id="N" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/252992062_2085392438286536_3735111891025925928_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeF9irDp56ATlr15d-xp_48S0WZ6CreKzJrRZnoKt4rMmmoFhoTjLIvg6ENCufpx-mCzfLxOX1-RvHVUKCPoAXPL&_nc_ohc=VIaER8bG9-kAX-XZrHh&_nc_ht=scontent.ftij1-2.fna&oh=d6043ab447b0d4cccd560224657d2ba6&oe=61B7878C" alt="10/10/2021"> 
-<p id="Pasear">Llevando al Balto a la tienda</p>
-
-<img Class="Q-a" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-b" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-c" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-d" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-e" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-f" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-g" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-h" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-i" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-j" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-k" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
- <img Class="Q-l" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-m" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-n" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ñ" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-o" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-p" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-q" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-r" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-s" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-t" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-u" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-v" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-w" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-x" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-y" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-z" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aa" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ab" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ac" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ad" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ae" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-af" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ag" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ah" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ai" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aj" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ak" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-al" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-am" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-an" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-añ" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ao" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ap" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
- <img Class="Q-aq" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ar" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-as" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-at" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-au" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-av" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ax" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-ay" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-az" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aaa" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aab" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aac" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aad" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aae" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aaf" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aag" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aah" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aai" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aaj" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aak" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
-<img Class="Q-aal" src="https://www.pinclipart.com/picdir/big/539-5394195_corazones-png-sin-fondo-clipart.png">
- 
-
-
-<img class="R-a" src="https://scontent.ftij1-2.fna.fbcdn.net/v/t1.15752-9/257461443_393770985769599_8983725019869900863_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_ohc=juqzZsXeUIYAX9nmQG4&_nc_ht=scontent.ftij1-2.fna&oh=5730447edacca8b6af420fb3996912f8&oe=61BCFD9B">
-<p id="Bendi">Feliz cumpleaños Mami</p>
-<img class="R-b" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-c" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-d" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-e" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-f" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-g" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-h" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-i" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-j" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-k" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
- <img class="R-l" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-m" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-n" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ñ" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-o" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-p" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-q" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-r" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-s" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-t" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-u" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-v" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-w" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-x" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-y" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-z" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-aa" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ab" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ac" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ad" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ae" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-af" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ag" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ah" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ai" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-aj" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ak" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-al" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-am" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-an" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png"> 
- <img class="R-añ" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ao" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ap" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-aq" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-ar" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png">
-<img class="R-as" src="https://static.vecteezy.com/system/resources/previews/001/187/719/non_2x/heart-couple-png.png"> 
-
-<p id="BB"> <strong><em>Inicio:</strong> <a href="#0"> Feliz cumpleañoooossss🖤🖤🖤 </em> </a> </p>
 </body>
 </html>
