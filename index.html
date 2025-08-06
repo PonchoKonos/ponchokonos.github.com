@@ -8,39 +8,51 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             overflow: hidden;
             position: relative;
         }
 
         .foto {
             position: absolute;
-            width: 120px;
+            width: 100px;
             height: auto;
             border: 2px solid #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             transition: transform 0.3s;
         }
 
         .foto:hover {
-            transform: scale(1.1) rotate(3deg);
-            z-index: 100;
+            transform: scale(1.2) rotate(2deg);
+            z-index: 10;
         }
     </style>
 </head>
 <body>
 
 <script>
-    // Genera imágenes del 1.jpg al 14.jpg
+    const usadas = []; // Para guardar coordenadas usadas y evitar que se empalmen
+
     for (let i = 1; i <= 14; i++) {
         const img = document.createElement("img");
         img.src = i + ".jpg";
         img.className = "foto";
 
-        // Posiciones aleatorias dentro del body
-        img.style.top = Math.random() * 80 + "vh";
-        img.style.left = Math.random() * 90 + "vw";
-        img.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
+        let top, left;
+        let separacionMin = 100; // Separación mínima entre imágenes
+
+        // Asegura que no se empalmen tanto
+        do {
+            top = Math.floor(Math.random() * 75) + 5;   // vh
+            left = Math.floor(Math.random() * 85) + 5;  // vw
+            var muyCerca = usadas.some(p => Math.abs(p.top - top) < 10 && Math.abs(p.left - left) < 10);
+        } while (muyCerca);
+
+        usadas.push({ top, left });
+
+        img.style.top = top + "vh";
+        img.style.left = left + "vw";
+        img.style.transform = `rotate(${Math.random() * 20 - 10}deg)`;
 
         document.body.appendChild(img);
     }
